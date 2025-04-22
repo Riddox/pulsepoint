@@ -63,23 +63,24 @@ const PatientForm = () => {
         iconSrc="/assets/icons/user.svg"
         iconAlt="user"
         />
-
-      <FormField
+    <CustomFormField 
+        fieldType={FormFieldType.INPUT}
         control={form.control}
-        name="username"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Username</FormLabel>
-            <FormControl>
-              <Input placeholder="Enter a name..." {...field} />
-            </FormControl>
-            <FormDescription>
-              This is your public display name.
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
+        name="email"
+        label="E-mail"
+        placeholder="jenniferdoe@example.com"
+        iconSrc="/assets/icons/email.svg"
+        iconAlt="email"
+        />
+
+    <CustomFormField 
+        fieldType={FormFieldType.PHONE_INPUT}
+        control={form.control}
+        name="phone"
+        label="Phone Number"
+        placeholder="(555) 123-4567"
+        />
+
       <Button type="submit">Submit</Button>
     </form>
   </Form>
